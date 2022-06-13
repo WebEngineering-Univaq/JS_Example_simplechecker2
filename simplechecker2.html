@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+    <head>
+         <title>Javascript form checks</title>
+        <link rel="stylesheet" href="iw_examples.css"/>
+        <meta charset="utf-8"/>
+<!--
+
+WEB EGINEERING COURSE - University of L'Aquila 
+
+Thi example shows how to automate form field checking using advanced
+object-based rules. Fields are checked dynamically and form cannot be
+submitted if an error occurs.
+See the course homepage: http://www.di.univaq.it/gdellape/students.php
+
+-->
+
+        <script type="text/javascript" src="simplechecker2.js"></script>
+    </head>
+    <body>
+        <h1 class="sezione">Form Checks</h1>
+        <p>The form below is controlled by Javascript using the
+    following rules (configured automatically through the class
+    attribute of the corresponding fields):</p>
+        <ul>
+            <li>the C1 field must contain a number and be not empty</li>
+            <li>the C2 field must contain an email address</li>
+        </ul>
+        <p>If the form fields are not valid, the user is warned and
+    guided through an error message. These message style and
+    position is fully customizable with CSS. The form cannot be
+    submitted if its data is not valid.</p>
+        <form action="#" method="get">
+            <p>C1: 
+                <input type="text" class="number required" id="i1" name="i1" value="v1" />&#160;C2: 
+      
+                <input type="text" class="email" id="i2" name="i2" value="v2" />
+                <input type="submit" name="submit" value="submit" />
+            </p>
+        </form>
+        <p>It is possible to configure more complex checks using the
+    FormChecker object accessible through the "checker" property of
+    corresponding form object, together with other objects defined
+    in the file simplechecker2.js</p>
+    </body>
+</html>
